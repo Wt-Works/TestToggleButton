@@ -24,7 +24,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include <iostream>
 
 #include "drawcanvas.h"
-#include "richelbilderbeekprogram.h"
 #include "textcanvas.h"
 #include "togglebutton.h"
 #include "testtimer.h"
@@ -71,7 +70,7 @@ ribi::About ribi::TestToggleButtonMenuDialog::GetAbout() const noexcept
     "Richel Bilderbeek",
     "TestToggleButton",
     "tool to test the ToggleButton class",
-    "the 21st of January 2014",
+    "January 7th of 2016",
     "2011-2015",
     "http://www.richelbilderbeek.nl/ToolTestToggleButton.htm",
     GetVersion(),
@@ -100,18 +99,9 @@ ribi::Help ribi::TestToggleButtonMenuDialog::GetHelp() const noexcept
   );
 }
 
-boost::shared_ptr<const ribi::Program> ribi::TestToggleButtonMenuDialog::GetProgram() const noexcept
-{
-  const boost::shared_ptr<const Program> p {
-    new ProgramTestToggleButton
-  };
-  assert(p);
-  return p;
-}
-
 std::string ribi::TestToggleButtonMenuDialog::GetVersion() const noexcept
 {
-  return "1.4";
+  return "2.0";
 }
 
 std::vector<std::string> ribi::TestToggleButtonMenuDialog::GetVersionHistory() const noexcept
@@ -121,7 +111,8 @@ std::vector<std::string> ribi::TestToggleButtonMenuDialog::GetVersionHistory() c
     "2011-06-31: Version 1.1: added more tests and an image to the Welcome screen in website version",
     "2012-06-21: Version 1.2: added desktop version",
     "2013-11-05: version 1.3: conformized for ProjectRichelBilderbeekConsole",
-    "2014-01-21: version 1.4: added displaying a toggle button as text"
+    "2014-01-21: version 1.4: added displaying a toggle button as text",
+    "2016-01-07: version 2.0: moved to own GitHub",
   };
 }
 

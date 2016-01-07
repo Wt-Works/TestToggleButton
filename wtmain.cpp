@@ -27,34 +27,33 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include <Wt/WPaintedWidget>
 #include <Wt/WPainter>
 #include <Wt/WPushButton>
-//---------------------------------------------------------------------------
+
 #include "wtautoconfig.h"
 #include "wttesttogglebuttonmenudialog.h"
-//---------------------------------------------------------------------------
+
 struct WtApplication : public Wt::WApplication
 {
   WtApplication(const Wt::WEnvironment& env)
     : Wt::WApplication(env),
-    m_dialog(new WtTestToggleButtonMenuDialog)
+    m_dialog(new ribi::WtTestToggleButtonMenuDialog)
   {
     this->setTitle("TestToggleButton");
     this->useStyleSheet("wt.css");
     root()->addWidget(m_dialog);
   }
   private:
-  WtTestToggleButtonMenuDialog * const m_dialog;
+  ribi::WtTestToggleButtonMenuDialog * const m_dialog;
 };
-//---------------------------------------------------------------------------
+
 Wt::WApplication *createApplication(
   const Wt::WEnvironment& env)
 {
   return new WtApplication(env);
 }
-//---------------------------------------------------------------------------
+
 int main(int argc, char **argv)
 {
-  WtAutoConfig a(argc,argv,createApplication);
-  WtAutoConfig::SaveDefaultStylesheet();
+  ribi::WtAutoConfig a(argc,argv,createApplication);
+  ribi::WtAutoConfig::SaveDefaultStylesheet();
   return a.Run();
 }
-//---------------------------------------------------------------------------

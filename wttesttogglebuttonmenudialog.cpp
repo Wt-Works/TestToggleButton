@@ -54,7 +54,7 @@ ribi::WtTestToggleButtonMenuDialog::WtTestToggleButtonMenuDialog()
   //Create resources
   {
     std::vector<std::string> image_names;
-    image_names.push_back("ToolTestToggleButtonWelcome.png");
+    image_names.push_back("TestToggleButtonWelcome.png");
 
     for(const std::string& filename: image_names)
     {
@@ -141,7 +141,7 @@ Wt::WWidget * ribi::WtTestToggleButtonMenuDialog::CreateNewWelcomeDialog() const
   new Wt::WBreak(dialog);
   new Wt::WBreak(dialog);
   Wt::WGroupBox * const box = new Wt::WGroupBox("Explanation",dialog);
-  box->addWidget(new Wt::WImage("ToolTestToggleButtonWelcome.png"));
+  box->addWidget(new Wt::WImage("TestToggleButtonWelcome.png"));
   return dialog;
 }
 

@@ -19,7 +19,7 @@
    <string>TestToggleButton</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="ToolTestToggleButton.qrc">
+   <iconset resource="TestToggleButton.qrc">
     <normaloff>:/ToolTestToggleButton/images/R.png</normaloff>:/ToolTestToggleButton/images/R.png</iconset>
   </property>
   <property name="styleSheet">
@@ -71,7 +71,7 @@ QPlainTextEdit { font: 12px courier new, courier, monospace;  }
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="ToolTestToggleButton.qrc">:/ToolTestToggleButton/images/ToolTestToggleButtonWelcome.png</pixmap>
+      <pixmap resource="TestToggleButton.qrc">:/ToolTestToggleButton/images/TestToggleButtonWelcome.png</pixmap>
      </property>
     </widget>
    </item>
@@ -99,7 +99,7 @@ QPlainTextEdit { font: 12px courier new, courier, monospace;  }
   </layout>
  </widget>
  <resources>
-  <include location="ToolTestToggleButton.qrc"/>
+  <include location="TestToggleButton.qrc"/>
  </resources>
  <connections/>
 </ui>

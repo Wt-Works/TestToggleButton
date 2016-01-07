@@ -58,7 +58,7 @@ void ribi::WtTestToggleButtonMainDialog::OnAboutClick()
 
 void ribi::WtTestToggleButtonMainDialog::OnDialChanged()
 {
-  const double x = ui.m_dial->GetWidget()->GetDial()->GetPosition();
+  const double x = ui.m_dial->GetWidget()->GetDial().GetPosition();
 
   double r,g,b;
   Rainbow::GetRgb(x,r,g,b);
@@ -142,10 +142,6 @@ void ribi::WtTestToggleButtonMainDialog::ShowMain()
   this->addWidget(new Wt::WBreak);
   {
     ui.m_dial= new WtDialWidget;
-    ui.m_dial->GetWidget()->GetDial()->m_signal_position_changed.connect(
-      boost::bind(
-        &ribi::WtTestToggleButtonMainDialog::OnDialChanged,
-        this));
     this->addWidget(ui.m_dial);
   }
 
